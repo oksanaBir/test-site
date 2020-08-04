@@ -1,0 +1,229 @@
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1080px) {
+  .body {
+    width: auto !important;
+  }
+
+  .about-me .content {
+    display: flex;
+    flex-direction: column !important;
+    margin: 0 !important;
+  }
+
+  .about-me .content .description p {
+    line-height: 2.5 !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .about-me .content img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .menu .content {
+    justify-content: space-between !important;
+    width: auto !important;
+    flex-direction: row !important;
+  }
+
+  .home .hide {
+    display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .more-info, .hide {
+    display: none !important;
+  }
+
+  .menu {
+    padding: 0 !important;
+    position: absolute !important;
+    margin-top: 100px !important;
+  }
+
+  .menu .content {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: auto !important;
+    height: 70px !important;
+    border-bottom: none !important;
+  }
+
+  .menu li {
+    font-size: 24px;
+    display: none;
+    margin: 0;
+    padding: 15px 0 15px 0;
+  }
+
+  .menu .hide {
+    display: flex !important;
+  }
+
+  .home {
+    height: 450px !important;
+    background-position: top !important;
+    background-size: auto !important;
+    margin-top: -100px;
+  }
+
+  .about-me .content img {
+    margin-left: -100px;
+    height: auto !important;
+    width: auto !important;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 650px) {
+  .about-me .content h1 {
+    font-size: 50px !important;
+  }
+  
+  .about-me .content .description p {
+    font-size: 30px !important;
+  }
+
+  .menu li {
+    font-size: 23px !important;
+    margin: 0 20px 0 20px !important;
+  }
+}
+
+@media (min-width: 650px) {
+  .menu li {
+    display: flex !important;
+  }
+
+  .menu .hide {
+    display: none !important;
+  }
+}
+
+.menu {
+  margin: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  position: absolute;
+  padding: 0 30px 0 30px;
+  font-family: 'PT Sans';
+}
+
+.menu .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(219, 219, 219);
+  padding: 0;
+  margin: 0;
+  height: 75px;
+}
+
+.menu li {
+  margin: 0 30px 0 30px;
+  color: rgb(219, 219, 219);
+  text-transform: uppercase;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.menu .hide {
+  font-weight: bold;
+  display: none;
+}
+
+.home {
+  background: url("images/Background.png") center no-repeat;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.more-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: rgb(209, 209, 209);
+  align-items: center;
+  flex: 0 0 auto;
+  padding-bottom: 30px;
+}
+
+.more-info p {
+  text-transform: uppercase;
+  font-family: 'PT Sans';
+}
+
+.more-info img {
+  height: 25px;
+  width: 25px;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-me .content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'OpenSans Light';
+  flex: 1 0 auto;
+  margin: 70px 0 70px 0;
+}
+
+.about-me .content img {
+  width: 650px;
+  height: 600px;
+}
+
+.about-me .description {
+  position: relative;
+  width: 550px;
+  padding: 0 35px 0 35px;
+}
+
+.about-me h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.about-me .description p {
+  line-height: 1.5;
+  font-size: 22px;
+}
+
+.about-me .sign {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+@font-face {
+  font-family: 'OpenSans Light';
+  src: url('fonts/OpenSans-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url('fonts/PT-Sans.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nexa Light';
+  src: url('fonts/Nexa-Light.otf');
+}
