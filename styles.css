@@ -132,7 +132,7 @@ html, body {
   }
 
   .about-me .content {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     margin: 0;
   }
