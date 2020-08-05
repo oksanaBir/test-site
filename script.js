@@ -1,28 +1,23 @@
 const getMenu = () => document.querySelector('.menu');
-const getMenuItems = () => [...document.querySelectorAll('.menu li')];
+const getMenuItems = () => document.querySelector('.menu .content');
 const getOpenMenuButton = () => document.querySelector('.menu .hide');
-const getBlock = () => document.querySelector('.home');
+const getHomeBlock = () => document.querySelector('.home');
 
 document.addEventListener('DOMContentLoaded', () => {
-	let isOpenMenu = true;
+	let isOpenMenu = false;
 
 	let toggleMenu = () => {
-		if(isOpenMenu) {
-			isOpenMenu = false;
-				getMenuItems().map((item) => {
-					item.style.display = 'flex';
-				});
-		} else {
+		if(isOpenMenu == false) {
 			isOpenMenu = true;
-			getMenuItems().map((item) => {
-				item.style.display = 'none';
-				getMenu().style.flexDirection = 'row';
-			});
+			getMenuItems().style.display = 'flex';
+		} else {
+			isOpenMenu = false;
+			getMenuItems().style.display = 'none';
 		}
 	}
 
 	let changeMenuPosition = () => {
-		if(document.documentElement.scrollTop >= getBlock().offsetHeight) {
+		if(document.documentElement.scrollTop >= getHomeBlock().offsetHeight) {
 			getMenu().style.position = 'fixed';
 			getMenu().style.fontFamily = 'Nexa Light';
 			getMenu().style.background = "white";
